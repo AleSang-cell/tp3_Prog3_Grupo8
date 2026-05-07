@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Nazareno",
+    "apellido": "Negrete",
+    "rol": "Backend"
+  },
+  {
+    "id": 2,
+    "nombre": "Alejo",
+    "apellido": "Sanger",
+    "rol": "Backend"
+  },
+  {
+    "id": 3,
+    "nombre": "Julián",
+    "apellido": "Peralta",
+    "rol": "Frontend"
+  },
+  {
+    "id": 4,
+    "nombre": "Gianfranco",
+    "apellido": "Tarulli",
+    "rol": "Diseño"
+  },
+  {
+    "id": 5,
+    "nombre": "Román",
+    "apellido": "Strizzi",
+    "rol": "Backend"
+  },
+  {
+    "id": 6,
+    "nombre": "Nicolas",
+    "apellido": "Castellini",
+    "rol": "Diseño"
+  }
+]
