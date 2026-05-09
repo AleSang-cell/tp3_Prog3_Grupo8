@@ -12,9 +12,11 @@ class Server {
 
     middleware() {
         this.app.use(cors())
+        this.app.use(express.json())
     }
 
     rutas() {
+        this.app.use("/auth", require("../routes/AuthRoutes"))
         this.app.use("/servicios", require("../routes/serviciosRoutes"))
         this.app.use("/equipo", require("../routes/equipoRoutes"))
         this.app.use("/perfil", require("../routes/perfileRoutes"))
