@@ -16,7 +16,7 @@ class Server {
     }
 
     rutas() {
-        this.app.use("/auth", require("../routes/AuthRoutes"))
+        this.app.use("/auth", require("../routes/authRoutes"))
         this.app.use("/servicios", require("../routes/serviciosRoutes"))
         this.app.use("/equipo", require("../routes/equipoRoutes"))
         this.app.use("/perfil", require("../routes/perfileRoutes"))
