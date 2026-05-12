@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "categoria": "acción",
+    "nombre": "Call of Duty"
+  },
+  {
+    "id": 2,
+    "categoria": "aventura",
+    "nombre": "The Legend of Zelda"
+  },
+  {
+    "id": 3,
+    "categoria": "deportes",
+    "nombre": "FIFA 25"
+  },
+  {
+    "id": 4,
+    "categoria": "rpg",
+    "nombre": "Final Fantasy VII"
+  }
+]
