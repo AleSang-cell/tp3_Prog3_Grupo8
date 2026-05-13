@@ -668,12 +668,14 @@ npm run dev
 # Deploys
 
 ## Backend
-
 Deploy realizado en Render.
+https://api.render.com/deploy/srv-d81mqg1j2pic739s5b90?key=UkOy_V3Xqi4 
+
 
 ## Frontend
 
 Deploy realizado en GitHub Pages.
+https://naxarenoxnt.github.io/TP1_Prog3_Grupo/
 
 ---
 
@@ -695,3 +697,4 @@ Deploy realizado en GitHub Pages.
 Este trabajo práctico permitió aplicar conocimientos de backend utilizando Node.js y Express, además de trabajar en equipo utilizando Git y GitHub.
 
 También se aprendió a consumir APIs desde el frontend, manejar archivos JSON, realizar deploys y estructurar proyectos reales de manera profesional.
+
