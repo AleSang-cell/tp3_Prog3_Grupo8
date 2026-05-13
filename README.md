@@ -45,7 +45,7 @@ La aplicación quedó separada en dos partes:
 
 # División de tareas entre integrantes
 
-## Nicolas Castellini — Documentación Final y README (Perfil: Detallista)
+## Nicolas Castellini — Documentación Final y README
 
 Encargado de la documentación general del proyecto y de la parte teórica del trabajo práctico.
 
@@ -105,7 +105,7 @@ Responsable de preparar la estructura inicial del backend y dejar operativo el s
 
 ---
 
-## Julián Peralta Muñiz — Integración y Front-end Async (Perfil: Experiencia Alta)
+## Julián Peralta Muñiz — Integración y Front-end Async 
 
 Responsable de integrar el frontend con el backend mediante consumo de API y funciones asíncronas.
 
@@ -121,7 +121,7 @@ Responsable de integrar el frontend con el backend mediante consumo de API y fun
 
 ---
 
-## Nazareno Negrete — Lógica y Controladores (Perfil: Experiencia Alta)
+## Nazareno Negrete — Lógica y Controladores 
 
 Responsable de desarrollar la lógica principal del backend y dar funcionamiento a los endpoints de la API.
 
@@ -137,7 +137,7 @@ Responsable de desarrollar la lógica principal del backend y dar funcionamiento
 
 ---
 
-## Gianfranco Tarulli — Especialista en QA y UI/UX (Nivel Inicial)
+## Gianfranco Tarulli — Especialista en QA y UI/UX
 
 Responsable de asegurar la calidad visual y funcional de la aplicación sin modificar el núcleo principal del sistema.
 
