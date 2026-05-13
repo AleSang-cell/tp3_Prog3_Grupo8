@@ -61,7 +61,8 @@ const registro = async (req, res) => {
             email,
             fechaNacimiento: fechaNacimiento || null,
             fechaRegistro: new Date().toISOString().split("T")[0],
-            password
+            password,
+            foto: "Assets/img/perfil-placeholder.png"
         }
 
         usuarios.push(nuevoUsuario)
