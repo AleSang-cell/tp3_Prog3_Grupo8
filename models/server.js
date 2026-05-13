@@ -20,6 +20,7 @@ class Server {
         this.app.use("/servicios", require("../routes/serviciosRoutes"))
         this.app.use("/equipo", require("../routes/equipoRoutes"))
         this.app.use("/perfil", require("../routes/perfileRoutes"))
+        this.app.use("/juegos", require("../routes/juegosRoutes"))
     }
 
     listen() {
