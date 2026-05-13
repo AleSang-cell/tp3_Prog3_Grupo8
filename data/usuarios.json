@@ -4,5 +4,41 @@
     "email": "admin@mail.com",
     "password": "1234",
     "nombre": "Administrador"
+  },
+  {
+    "id": 2,
+    "email": "nazarenonegrete@mail.com",
+    "password": "1234",
+    "nombre": "Nazareno Negrete"
+  },
+  {
+    "id": 3,
+    "email": "alejosanger@mail.com",
+    "password": "1234",
+    "nombre": "Alejo Sanger"
+  },
+  {
+    "id": 4,
+    "email": "julianperalta@mail.com",
+    "password": "1234",
+    "nombre": "Julián Peralta"
+  },
+  {
+    "id": 5,
+    "email": "gianfrancotarulli@mail.com",
+    "password": "1234",
+    "nombre": "Gianfranco Tarulli"
+  },
+  {
+    "id": 6,
+    "email": "romanstrizzi@mail.com",
+    "password": "1234",
+    "nombre": "Román Strizzi"
+  },
+  {
+    "id": 7,
+    "email": "nicolascastellini@mail.com",
+    "password": "1234",
+    "nombre": "Nicolas Castellini"
   }
 ]
