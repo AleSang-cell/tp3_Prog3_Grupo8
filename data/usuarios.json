@@ -1,44 +1,50 @@
 [
   {
     "id": 1,
-    "email": "admin@mail.com",
+    "email": "nazarenonegrete@mail.com",
     "password": "1234",
-    "nombre": "Administrador"
+    "nombre": "Nazareno Negrete",
+    "fechaRegistro": "2026-04-01",
+    "foto": "Assets/img/Coboltprogramer.jpg"
   },
   {
     "id": 2,
-    "email": "nazarenonegrete@mail.com",
+    "email": "alejosanger@mail.com",
     "password": "1234",
-    "nombre": "Nazareno Negrete"
+    "nombre": "Alejo Sanger",
+    "fechaRegistro": "2026-04-01",
+    "foto": "Assets/img/incognito.jpg"
   },
   {
     "id": 3,
-    "email": "alejosanger@mail.com",
+    "email": "julianperalta@mail.com",
     "password": "1234",
-    "nombre": "Alejo Sanger"
+    "nombre": "Julián Peralta",
+    "fechaRegistro": "2026-04-01",
+    "foto": "Assets/img/glugluglu.jpg"
   },
   {
     "id": 4,
-    "email": "julianperalta@mail.com",
+    "email": "gianfrancotarulli@mail.com",
     "password": "1234",
-    "nombre": "Julián Peralta"
+    "nombre": "Gianfranco Tarulli",
+    "fechaRegistro": "2026-04-01",
+    "foto": "Assets/img/Explicandoelbugalpato.png"
   },
   {
     "id": 5,
-    "email": "gianfrancotarulli@mail.com",
+    "email": "romanstrizzi@mail.com",
     "password": "1234",
-    "nombre": "Gianfranco Tarulli"
+    "nombre": "Román Strizzi",
+    "fechaRegistro": "2026-04-01",
+    "foto": "Assets/img/YoUnDiaAntesDelExamen.jpg"
   },
   {
     "id": 6,
-    "email": "romanstrizzi@mail.com",
-    "password": "1234",
-    "nombre": "Román Strizzi"
-  },
-  {
-    "id": 7,
     "email": "nicolascastellini@mail.com",
     "password": "1234",
-    "nombre": "Nicolas Castellini"
+    "nombre": "Nicolas Castellini",
+    "fechaRegistro": "2026-04-01",
+    "foto": "Assets/img/ArregleElBugPeroBugeeLaVida.png"
   }
 ]
