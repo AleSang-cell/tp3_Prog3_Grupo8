@@ -2,21 +2,57 @@
   {
     "id": 1,
     "categoria": "acción",
-    "nombre": "Call of Duty"
+    "nombre": "Call of Duty",
+    "precioOriginal": 69.99,
+    "precioOferta": 34.99
   },
   {
     "id": 2,
     "categoria": "aventura",
-    "nombre": "The Legend of Zelda"
+    "nombre": "The Legend of Zelda",
+    "precioOriginal": 59.99,
+    "precioOferta": 29.99
   },
   {
     "id": 3,
     "categoria": "deportes",
-    "nombre": "FIFA 25"
+    "nombre": "FIFA 25",
+    "precioOriginal": 69.99,
+    "precioOferta": 39.99
   },
   {
     "id": 4,
     "categoria": "rpg",
-    "nombre": "Final Fantasy VII"
+    "nombre": "Final Fantasy VII",
+    "precioOriginal": 49.99,
+    "precioOferta": 19.99
+  },
+  {
+    "id": 5,
+    "categoria": "acción",
+    "nombre": "God of War",
+    "precioOriginal": 59.99,
+    "precioOferta": 29.99
+  },
+  {
+    "id": 6,
+    "categoria": "aventura",
+    "nombre": "Red Dead Redemption 2",
+    "precioOriginal": 59.99,
+    "precioOferta": 24.99
+  },
+  {
+    "id": 7,
+    "categoria": "deportes",
+    "nombre": "NBA 2K25",
+    "precioOriginal": 69.99,
+    "precioOferta": 44.99
+  },
+  {
+    "id": 8,
+    "categoria": "rpg",
+    "nombre": "Elden Ring",
+    "precioOriginal": 59.99,
+    "precioOferta": 35.99
   }
 ]
