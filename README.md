@@ -22,11 +22,9 @@
 * Nazareno Negrete
 * Gianfranco Tarulli
 
-
-
 ---
 
-# TRABAJO PRACTICO N°3
+# TRABAJO PRÁCTICO N°3
 
 # Plataforma Web con Frontend + Backend API REST
 
@@ -44,6 +42,7 @@ La aplicación quedó separada en dos partes:
 * Backend → servidor API REST y manejo de datos JSON.
 
 ---
+
 # División de tareas entre integrantes
 
 ## Nicolas Castellini — Documentación Final y README (Perfil: Detallista)
@@ -152,8 +151,8 @@ Responsable de asegurar la calidad visual y funcional de la aplicación sin modi
 * Validación de consumo de datos desde la API.
 * Apoyo en pruebas finales antes del deploy.
 
-
 ---
+
 # FRONTEND
 
 ## Objetivo del Frontend
@@ -185,7 +184,7 @@ Se encarga de:
 
 El frontend realiza peticiones HTTP al backend utilizando `fetch()`.
 
-Ejemplo:
+### Ejemplo
 
 ```js
 const respuesta = await fetch("https://api-render.com/servicios")
@@ -194,15 +193,15 @@ const datos = await respuesta.json()
 
 ### Explicación
 
-### `fetch()`
+#### `fetch()`
 
 Realiza una petición HTTP al servidor.
 
-### `await`
+#### `await`
 
 Espera la respuesta del backend.
 
-### `.json()`
+#### `.json()`
 
 Convierte la respuesta a formato JSON.
 
@@ -235,25 +234,25 @@ async function obtenerServicios() {
 }
 ```
 
-## Explicación línea por línea
+### Explicación línea por línea
 
-### `async function`
+#### `async function`
 
 Declara una función asíncrona.
 
-### `try/catch`
+#### `try/catch`
 
 Permite manejar errores sin romper la aplicación.
 
-### `await fetch(URL)`
+#### `await fetch(URL)`
 
 Espera la respuesta del backend.
 
-### `await respuesta.json()`
+#### `await respuesta.json()`
 
 Convierte la respuesta a JSON.
 
-### `mostrarServicios(servicios)`
+#### `mostrarServicios(servicios)`
 
 Envía los datos a otra función encargada de renderizar HTML.
 
@@ -283,7 +282,7 @@ Su función es:
 
 ---
 
-## Tecnologías Utilizadas en Backend
+# Tecnologías Utilizadas
 
 ## Backend
 
@@ -293,12 +292,6 @@ Su función es:
 * Dotenv
 * Nodemon
 * ESLint
-
-## Frontend
-
-* HTML5
-* CSS3
-* JavaScript
 
 ## Herramientas
 
@@ -328,12 +321,12 @@ El proyecto fue desarrollado utilizando una metodología basada en ramas para ma
 4. Luego de probar el funcionamiento general, los cambios fueron mergeados a `main`.
 5. Se realizaron pruebas de deploy utilizando Render y GitHub Pages.
 
-## Ejemplo de comandos utilizados
+### Ejemplo de comandos utilizados
 
 ```bash
 git checkout -b NCastellini
 git add .
-git commit -m "Se agregan rutas de servicios"
+git commit -m "Se agregan deploys de Render y Github"
 git push origin NCastellini
 ```
 
@@ -399,21 +392,21 @@ servidor.listen()
 
 ### Explicación
 
-### `const Server = require('./models/server')`
+#### `const Server = require('./models/server')`
 
 Importa la clase `Server` desde el archivo `server.js`.
 
-### `const servidor = new Server()`
+#### `const servidor = new Server()`
 
 Crea una nueva instancia del servidor.
 
-### `servidor.listen()`
+#### `servidor.listen()`
 
 Inicia el servidor y deja la API escuchando peticiones.
 
 ---
 
-# models/server.js
+## models/server.js
 
 ```js
 const express = require('express')
@@ -421,17 +414,17 @@ const cors = require('cors')
 require('dotenv').config()
 ```
 
-## Explicación
+### Explicación
 
-### `express`
+#### `express`
 
 Framework utilizado para crear el servidor y manejar rutas.
 
-### `cors`
+#### `cors`
 
 Permite que el frontend pueda comunicarse con el backend.
 
-### `dotenv`
+#### `dotenv`
 
 Carga variables de entorno desde el archivo `.env`.
 
@@ -450,19 +443,19 @@ constructor() {
 
 ### Explicación línea por línea
 
-### `this.app = express()`
+#### `this.app = express()`
 
 Crea la aplicación Express.
 
-### `this.port = process.env.PORT || 3000`
+#### `this.port = process.env.PORT || 3000`
 
-Define el puerto del servidor. Si Render asigna un puerto, utiliza ese; si no, usa el puerto 3000.
+Define el puerto del servidor.
 
-### `this.middleware()`
+#### `this.middleware()`
 
 Ejecuta las configuraciones intermedias.
 
-### `this.rutas()`
+#### `this.rutas()`
 
 Carga todas las rutas del proyecto.
 
@@ -496,17 +489,9 @@ rutas() {
 
 Define las rutas principales de la API.
 
-### `/servicios`
-
-Devuelve todos los servicios y también servicios por ID.
-
-### `/equipo`
-
-Devuelve información de los integrantes.
-
-### `/perfil`
-
-Devuelve información del perfil de usuario.
+* `/servicios` → devuelve servicios.
+* `/equipo` → devuelve integrantes.
+* `/perfil` → devuelve perfiles de usuario.
 
 ---
 
@@ -522,66 +507,7 @@ listen() {
 
 ### Explicación
 
-Inicia el servidor y muestra un mensaje en consola indicando el puerto utilizado.
-
----
-
-# Explicación de las Rutas
-
-## routes/serviciosRoutes.js
-
-```js
-const { Router } = require("express")
-
-const {
-        getServicios,getServicioById
-} = require("../controllers/serviciosController")
-
-const rutas = Router()
-
-rutas.get("/", getServicios)
-rutas.get("/:id", getServicioById)
-
-module.exports = rutas
-```
-
-## Explicación
-
-### `Router()`
-
-Permite crear rutas separadas del servidor principal.
-
-### `rutas.get("/", getServicios)`
-
-Endpoint para obtener todos los servicios.
-
-### `rutas.get("/:id", getServicioById)`
-
-Endpoint para obtener un servicio específico mediante su ID.
-
----
-
-## routes/equipoRoutes.js
-
-### Endpoint disponible
-
-```http
-GET /equipo
-```
-
-Devuelve el listado completo de integrantes.
-
----
-
-## routes/perfileRoutes.js
-
-### Endpoint disponible
-
-```http
-GET /perfil/:id
-```
-
-Devuelve la información de un usuario específico.
+Inicia el servidor y muestra un mensaje indicando el puerto utilizado.
 
 ---
 
@@ -596,20 +522,35 @@ Devuelve la información de un usuario específico.
 
 ---
 
-# Estructura de Archivos JSON
+# Ejemplos de Endpoints
 
-## servicios.json
+## Obtener todos los servicios
 
-```json
-[
-  {
-    "id": 1,
-    "nombre": "Desarrollo Web",
-    "descripcion": "Creación de páginas web modernas",
-    "precio": 50000
-  }
-]
+```http
+GET /servicios
 ```
+
+## Obtener un servicio por ID
+
+```http
+GET /servicios/1
+```
+
+## Obtener integrantes
+
+```http
+GET /equipo
+```
+
+## Obtener perfil
+
+```http
+GET /perfil/1
+```
+
+---
+
+# Estructura de Archivos JSON
 
 ## equipo.json
 
@@ -617,8 +558,9 @@ Devuelve la información de un usuario específico.
 [
   {
     "id": 1,
-    "nombre": "Nicolas",
-    "rol": "Backend Developer"
+    "nombre": "Nazareno",
+    "apellido": "Negrete",
+    "rol": "Backend"
   }
 ]
 ```
@@ -629,16 +571,37 @@ Devuelve la información de un usuario específico.
 [
   {
     "id": 1,
-    "nombre": "Juan Perez",
-    "email": "juan@gmail.com",
-    "fechaRegistro": "2026-05-10",
-    "ultimosPedidos": [
-      "Pedido 1",
-      "Pedido 2",
-      "Pedido 3"
-    ]
+    "email": "admin@mail.com",
+    "password": "1234",
+    "nombre": "Administrador"
   }
 ]
+```
+
+## servicios.json
+
+```json
+[
+  {
+    "id": 1,
+    "nombre": "Venta de Juegos Digitales",
+    "descripcion": "Compra de videojuegos para PC",
+    "precio": 5000
+  }
+]
+```
+
+---
+
+# Archivo .gitignore
+
+El archivo `.gitignore` se utilizó para evitar subir archivos innecesarios o sensibles al repositorio.
+
+## Elementos ignorados
+
+```gitignore
+node_modules/
+.env
 ```
 
 ---
@@ -668,14 +631,20 @@ npm run dev
 # Deploys
 
 ## Backend
-Deploy realizado en Render.
-https://api.render.com/deploy/srv-d81mqg1j2pic739s5b90?key=UkOy_V3Xqi4 
 
+Deploy realizado en Render.
+
+```text
+https://TU-BACKEND.onrender.com
+```
 
 ## Frontend
 
 Deploy realizado en GitHub Pages.
+
+```text
 https://naxarenoxnt.github.io/TP1_Prog3_Grupo/
+```
 
 ---
 
@@ -689,6 +658,9 @@ https://naxarenoxnt.github.io/TP1_Prog3_Grupo/
 * Uso de Git Flow.
 * Uso de Express Router.
 * Implementación de endpoints REST.
+* Uso de funciones asíncronas.
+* Manejo de errores mediante `try/catch`.
+* Organización del proyecto por carpetas.
 
 ---
 
@@ -698,3 +670,4 @@ Este trabajo práctico permitió aplicar conocimientos de backend utilizando Nod
 
 También se aprendió a consumir APIs desde el frontend, manejar archivos JSON, realizar deploys y estructurar proyectos reales de manera profesional.
 
+El proyecto permitió comprender el funcionamiento de una arquitectura cliente-servidor utilizando tecnologías modernas de desarrollo web.
