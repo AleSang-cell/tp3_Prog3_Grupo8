@@ -2,6 +2,7 @@ const path = require("path")
 const fs = require("fs").promises
 
 const usuariosPath = path.join(__dirname, "../data/usuarios.json")
+const juegosPath = path.join(__dirname, "../data/juegos.json")
 
 const getPerfilById = async (req, res) => {
     try {
@@ -15,10 +16,25 @@ const getPerfilById = async (req, res) => {
             return res.status(404).json({ msg: `Perfil con id ${id} no encontrado` })
         }
 
-        // No devolver la password
-        const { password: _, ...usuarioSinPassword } = usuario
+        // Leer ofertas (juegos)
+        let ofertas = []
+        try {
+            const juegosData = await fs.readFile(juegosPath, "utf-8")
+            ofertas = JSON.parse(juegosData)
+        } catch (err) {
+            console.warn("No se pudo leer juegos.json:", err.message)
+        }
 
-        res.json(usuarioSinPassword)
+        const pedidos = Array.isArray(usuario.pedidos) ? usuario.pedidos : []
+        const ultimos3Pedidos = pedidos.slice(-3).reverse()
+
+        const { password: _, pedidos: __, ...datosPerfil } = usuario
+
+        res.json({
+            ...datosPerfil,
+            ultimos3Pedidos,
+            ofertas
+        })
     } catch (error) {
         console.error("Error al leer perfil:", error)
         res.status(500).json({ msg: "Error interno del servidor" })
